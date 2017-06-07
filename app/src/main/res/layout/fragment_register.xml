@@ -13,15 +13,17 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/reg_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="20dp"
-                android:hint="Nmae"
+                android:hint="Name"
                 android:inputType="textPersonName"/>
 
             <EditText
+                android:id="@+id/reg_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -31,6 +33,7 @@
                 android:inputType="textEmailAddress"/>
 
             <EditText
+                android:id="@+id/reg_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -41,6 +44,7 @@
                 android:hint="Password"/>
 
             <EditText
+                android:id="@+id/reg_password_again"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -50,15 +54,17 @@
                 android:hint="Password again"/>
 
             <Button
+                android:id="@+id/signUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign up"
-                android:background="#129074"
-                android:textAllCaps="false"
-                android:textSize="18dp"
-                android:textColor="#fff"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp" />
+                android:layout_marginRight="16dp"
+                android:background="#129074"
+                android:onClick="UserRegister"
+                android:text="Sign up"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18dp" />
 
             <View
                 android:layout_width="match_parent"

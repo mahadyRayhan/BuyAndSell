@@ -8,4 +8,31 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="country_prompt">Choose Your Area</string>
+
+    <string-array name="feature">
+        <item>Select features (optional)</item>
+    </string-array>
+
+    <string-array name="condition">
+        <item><FONT COLOR="#808080">Select condition</FONT></item>
+        <item>Used</item>
+        <item>New</item>
+    </string-array>
+
+    <string-array name="brand">
+        <item>Select Brand</item>
+        <item>iPhone</item>
+        <item>Samsung</item>
+        <item>Nokia</item>
+        <item>Sony</item>
+        <item>Huawei</item>
+    </string-array>
+
+    <string-array name="authenticity">
+        <item>Select Authenticity</item>
+        <item>Original</item>
+        <item>Replica/Clone</item>
+    </string-array>
 </resources>

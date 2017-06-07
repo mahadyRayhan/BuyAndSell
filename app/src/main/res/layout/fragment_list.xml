@@ -2,19 +2,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.nocturnal.buyandsell.Fragment.ListFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/AddList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="30sp"
-            android:text="ada ad ad "/>
-    </LinearLayout>
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/post_ad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@android:color/holo_blue_bright"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_marginBottom="20dp"/>
 
 
 </FrameLayout>
