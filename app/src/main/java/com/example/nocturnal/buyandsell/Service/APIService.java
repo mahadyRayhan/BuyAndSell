@@ -57,11 +57,25 @@ public interface APIService {
                      @Field("secondImageUrl") String secondImageUrl,
                      @Field("thirdImageUrl") String thirdImageUrl,
                      @Field("forthImageUrl") String forthImageUrl,
-                     @Field("fifthImageUrl") String fifthImageUrl
+                     @Field("fifthImageUrl") String fifthImageUrl,
+                     @Field("userId") int userId,
+                     @Field("category") String category
                      );
 
     @GET("Android/getAllAd.php")
     Call<ArrayList<Add>>getAllAdinInfo();
 
+    @GET("Android/searchAdByLocation.php")
+    Call<ArrayList<Add>>getAddInfoByLocation(@Query("selectLocationForSearch") String selectLocationForSearch);
+
+    @GET("Android/searchAdByCategory.php")
+    Call<ArrayList<Add>>getAddInfoByCategory(@Query("selectCategoryForSearch") String selectCategoryForSearch);
+
+
+    @GET("Android/getAdOwnerInfo.php")
+    Call<ArrayList<Users>>getAdOwnerInfo(@Query("userID") int userID);
+
+    @GET("Android/generalSearch.php")
+    Call<ArrayList<Add>>getAddInfoByGeneralSearch(@Query("generalSearch") String generalSearch);
 
 }

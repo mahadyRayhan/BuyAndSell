@@ -32,11 +32,6 @@ public class RegisterFragment extends Fragment {
     private EditText usernameET,emailET,passwordET,getPasswordAgainET;
     private Button signUpBTN;
 
-    public RegisterFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -1,5 +1,7 @@
 package com.example.nocturnal.buyandsell.Activity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
@@ -16,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.nocturnal.buyandsell.Fragment.ListFragment;
 import com.example.nocturnal.buyandsell.Fragment.LogInFragment;
@@ -23,13 +26,16 @@ import com.example.nocturnal.buyandsell.Fragment.RegisterFragment;
 import com.example.nocturnal.buyandsell.R;
 
 public class StartingActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener , LogInFragment.userIdListener{
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     private TextView testTV,signUpNowTV,logInFromRegPageTV;
     private Button signUpWithEmailBtn;
     private LinearLayout loginPanelLL;
 
     private EditText usernameET,emailET,passwordET,getPasswordAgainET;
+
+    private SharedPreferences mypreferences;
+    private SharedPreferences.Editor editor;
 
     private static final String REGISTER_URL = "http://localhost/Android/register.php";
 
@@ -38,6 +44,9 @@ public class StartingActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starting);
+
+        mypreferences  = getSharedPreferences("userInfo",MODE_PRIVATE);
+        editor = mypreferences.edit();
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
@@ -98,7 +107,8 @@ public class StartingActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            Intent intent = new Intent(this, StartingActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
@@ -108,9 +118,25 @@ public class StartingActivity extends AppCompatActivity
             ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
             ft.commit();
         } else if (id == R.id.nav_slideshow) {
-
+            String location = mypreferences.getString("location","");
+            String phone = mypreferences.getString("phone","");
+            String email = mypreferences.getString("email","");
+            int userId = mypreferences.getInt("userId",0);
+            if (location.isEmpty() || phone.isEmpty() || email.isEmpty()){
+                Toast.makeText(this, "Please log in & complete your account to post add", Toast.LENGTH_SHORT).show();
+            }else {
+                Intent intent = new Intent(this, PostAd.class);
+                startActivity(intent);
+            }
         } else if (id == R.id.nav_manage) {
-
+            editor.putString("userImage","");
+            editor.putString("location","");
+            editor.putString("phone","");
+            editor.putString("userFullName","");
+            editor.putString("email","");
+            editor.commit();
+            finish();
+            startActivity(getIntent());
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -134,8 +160,5 @@ public class StartingActivity extends AppCompatActivity
     }
 
 
-    @Override
-    public void getUserId(int id) {
 
-    }
 }

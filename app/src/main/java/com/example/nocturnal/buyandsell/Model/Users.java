@@ -31,6 +31,19 @@ public class Users {
         this.id = id;
     }
 
+
+    public Users(String username, String email, String password, int id, String user_full_name, String user_location, String user_image_url, String user_phone, String user_type) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.id = id;
+        this.user_full_name = user_full_name;
+        this.user_location = user_location;
+        this.user_image_url = user_image_url;
+        this.user_phone = user_phone;
+        this.user_type = user_type;
+    }
+
     public Users(String username, String email, String password) {
         this.username = username;
         this.email = email;
@@ -39,6 +52,8 @@ public class Users {
 
     public Users() {
     }
+
+
 
     public String getUsername() {
         return username;

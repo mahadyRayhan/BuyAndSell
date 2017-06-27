@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="125dp"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
@@ -34,7 +34,7 @@
                 android:layout_weight="7.5"
                 android:orientation="vertical"
                 android:paddingLeft="10dp"
-                android:paddingTop="5dp">
+                >
 
                 <TextView
                     android:id="@+id/adProductName"
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:text="canon 700d with 18-55mm"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -51,24 +51,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:text="Dhaka, Camera"
-                    android:textSize="15dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/productPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Tk 30000"
-                    android:textSize="20dp" />
+                    android:textSize="18dp" />
 
-                <TextView
-                    android:id="@+id/adPostTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:gravity="right"
-                    android:text="26 min"
-                    android:textAlignment="gravity"
-                    android:textSize="12dp" />
+
 
 
             </LinearLayout>

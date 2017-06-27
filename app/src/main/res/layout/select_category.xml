@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/MobilePhones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5ddfa5"
+            android:textColor="#000"
+            android:text="Mobile Phones &amp; Accessories"
+            android:textSize="18dp" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/Computer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5ddfa5"
+            android:textColor="#000"
+            android:text="Computer/Tablets &amp; Accessories"
+            android:textSize="18dp" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/TVs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5ddfa5"
+            android:textColor="#000"
+            android:text="TVs"
+            android:textSize="18dp" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/Cameras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5ddfa5"
+            android:textColor="#000"
+            android:text="Cameras &amp; Comcorders"
+            android:textSize="18dp" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/VideoGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5ddfa5"
+            android:textColor="#000"
+            android:text="Video Games &amp; Consoles"
+            android:textSize="18dp" />
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

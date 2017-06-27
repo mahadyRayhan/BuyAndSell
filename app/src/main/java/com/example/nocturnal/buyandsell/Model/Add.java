@@ -6,6 +6,7 @@ package com.example.nocturnal.buyandsell.Model;
 
 public class Add {
     private int addId;
+    private int userId;
     private String add_Location;
     private String add_description;
     private String add_product_model_no;
@@ -15,12 +16,14 @@ public class Add {
     private String add_select_feature;
     private String add_authenticity;
     private String add_negotiable;
+    private String add_category;
 
     private String fisrt_image_url;
     private String second_image_url;
     private String third_image_url;
     private String forth_image_url;
     private String fifth_image_url;
+
 
     public Add() {
     }
@@ -40,12 +43,16 @@ public class Add {
         this.add_negotiable = add_negotiable;
     }
 
-    public Add(int addId, String add_Location, String add_description,
-               String add_product_model_no, String add_price, String add_product_condition,
-               String add_brand, String add_select_feature, String add_authenticity,
-               String add_negotiable, String fisrt_image_url, String second_image_url,
-               String third_image_url, String forth_image_url, String fifth_image_url) {
+    public Add(int addId, int userId, String add_Location,
+               String add_description, String add_product_model_no,
+               String add_price, String add_product_condition,
+               String add_brand, String add_select_feature,
+               String add_authenticity, String add_negotiable,
+               String add_category, String fisrt_image_url,
+               String second_image_url, String third_image_url,
+               String forth_image_url, String fifth_image_url) {
         this.addId = addId;
+        this.userId = userId;
         this.add_Location = add_Location;
         this.add_description = add_description;
         this.add_product_model_no = add_product_model_no;
@@ -55,6 +62,7 @@ public class Add {
         this.add_select_feature = add_select_feature;
         this.add_authenticity = add_authenticity;
         this.add_negotiable = add_negotiable;
+        this.add_category = add_category;
         this.fisrt_image_url = fisrt_image_url;
         this.second_image_url = second_image_url;
         this.third_image_url = third_image_url;
@@ -68,6 +76,14 @@ public class Add {
         this.add_price = add_price;
         this.add_authenticity = add_authenticity;
         this.fisrt_image_url = fisrt_image_url;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public int getAddId() {
@@ -189,4 +205,14 @@ public class Add {
     public void setFifth_image_url(String fifth_image_url) {
         this.fifth_image_url = fifth_image_url;
     }
+
+    public String getAdd_category() {
+        return add_category;
+    }
+
+    public void setAdd_category(String add_category) {
+        this.add_category = add_category;
+    }
+
+
 }

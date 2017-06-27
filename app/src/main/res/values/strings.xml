@@ -10,6 +10,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="country_prompt">Choose Your Area</string>
+    <string name="menu_call">Call</string>
+    <string name="menu_sms">SMS</string>
+    <string name="menu_email">Email</string>
 
     <string-array name="feature">
         <item>Select features (optional)</item>
@@ -34,5 +37,14 @@
         <item>Select Authenticity</item>
         <item>Original</item>
         <item>Replica/Clone</item>
+    </string-array>
+
+    <string-array name="selectSearchPlace">
+        <item><FONT COLOR="#808080">Select A Place</FONT></item>
+        <item>Mirpur</item>
+        <item>Dhanmondi</item>
+        <item>Gulsan</item>
+        <item>Bonani</item>
+        <item>Uttora</item>
     </string-array>
 </resources>

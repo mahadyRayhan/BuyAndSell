@@ -5,13 +5,112 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.nocturnal.buyandsell.Fragment.ListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/AddList"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="7"
+            android:layout_marginBottom="-6dp">
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6">
+            </android.support.v7.widget.SearchView>
+
+            <ImageButton
+                android:id="@+id/searchbar_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="-10dp"
+                android:layout_marginLeft="-15dp"
+                android:layout_marginRight="-5dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/search"/>
+
+            <ImageButton
+                android:id="@+id/refreshAllAd"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="-10dp"
+                android:layout_marginLeft="-15dp"
+                android:layout_marginRight="-5dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/loading"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <Button
+                android:id="@+id/searchByLocation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="-4dp"
+                android:text="All Location"
+                android:drawableLeft="@drawable/location32"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:paddingLeft="25dp"
+                android:textAlignment="center"
+                android:drawablePadding="-20dp"
+                android:textAllCaps="false"
+                />
+            <Button
+                android:id="@+id/searchByCategory"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:text="Categories"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result: "
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/numberOfAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginLeft="0dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/AddList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
 
 
     <android.support.design.widget.FloatingActionButton

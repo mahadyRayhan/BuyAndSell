@@ -3,6 +3,7 @@ package com.example.nocturnal.buyandsell.Fragment;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -38,6 +39,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static android.app.Activity.RESULT_OK;
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,7 +47,7 @@ import static android.app.Activity.RESULT_OK;
 public class EditMyAccountFragment extends Fragment {
 
     private ImageView edit_profile_imageEV;
-    private EditText edit_full_nameET,edit_areaET,edit_phoneET;
+    private EditText edit_full_nameET,edit_areaET,edit_phoneET,user_reggester_emailET;
     private Button edit_location_from_gpsBTN;
 
     ProgressDialog progressDialog;
@@ -56,26 +58,27 @@ public class EditMyAccountFragment extends Fragment {
     MenuItem save_menu_item,edit_menu_item;
     private int userId;
 
-
-    public EditMyAccountFragment() {
-        // Required empty public constructor
-    }
-
+    private SharedPreferences mypreferences;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_edit_my_account, container, false);
+        mypreferences  = getActivity().getSharedPreferences("userInfo",MODE_PRIVATE);
         setHasOptionsMenu(true);
-
-        userId=getArguments().getInt("id",0);
 
         edit_profile_imageEV = (ImageView) v.findViewById(R.id.edit_profile_image);
         edit_full_nameET = (EditText) v.findViewById(R.id.edit_full_name);
         edit_areaET = (EditText) v.findViewById(R.id.edit_area);
+        user_reggester_emailET = (EditText) v.findViewById(R.id.user_reggester_email);
         edit_phoneET = (EditText) v.findViewById(R.id.edit_phone);
         edit_location_from_gpsBTN = (Button) v.findViewById(R.id.edit_location_from_gps);
+
+        String email = mypreferences.getString("email","");
+        userId = mypreferences.getInt("userId",0);
+
+        user_reggester_emailET.setText(email);
 
         progressDialog = new ProgressDialog(getContext());
         progressDialog.setMessage("Completiong your account.....");
